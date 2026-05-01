@@ -1,0 +1,358 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: rgb(26, 33, 45);
+  color: #fff;
+}
+
+
+nav {
+  background-color: #000;
+  padding: 15px;
+  text-align: right;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+nav a {
+  color: #fff;
+  margin: 0 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #00bcd4;
+}
+
+
+.section {
+  min-height: 100vh;
+  padding: 10px 40px;
+}
+
+
+#contacto {
+  min-height: 50vh;
+}
+
+
+
+#inicio {
+  display: flex;
+  justify-content: center;   
+  align-items: center;       
+  min-height: calc(100vh - 60px); 
+  padding-top: 60px;         
+}
+
+.intro-container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+}
+
+.intro-text {
+  flex: 1;
+  text-align: left;
+}
+
+.intro-text h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.intro-text h2 {
+  font-size: 1.8em;
+  color: #00b8d4;
+  margin: 10px 0;
+}
+.intro-text p {
+  font-size: 1.2em;
+}
+
+.intro-text button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: #00bcd4;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1em;
+  border-radius: 5px;
+}
+
+.intro-text button:hover {
+  background-color: #0097a7;
+}
+
+
+.avatar {
+  flex-shrink: 0;
+  margin-left: 40px;
+}
+.avatar img {
+  width: 300px;
+  border-radius: 50%;
+  border: 4px solid orange;
+}
+
+
+@media (max-width: 768px) {
+  .intro-container {
+    flex-direction: column;   
+    text-align: center;
+  }
+
+  .intro-text {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .avatar {
+    margin-left: 0;
+  }
+
+  .avatar img {
+    width: 200px; 
+  }
+
+}
+
+.enlaces a:hover {
+  color: #3300ff;
+}
+
+
+
+
+
+/* El fondo oscuro que cubre la pantalla */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* La caja blanca con la información */
+.modal-content {
+    background-color: #1a1a1a; 
+    color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #00f2ff; 
+    width: 50%;
+    border-radius: 10px;
+    position: relative;
+    text-align: justify;
+}
+
+/* El botón de cerrar (x) */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #00f2ff;
+}
+
+/* La caja de información adaptable */
+.modal-content {
+    background-color: #1a1a1a;
+    color: white;
+    margin: 10% auto; 
+    padding: 20px;
+    border: 2px solid #00f2ff;
+    width: 80%;          
+    max-width: 500px;    
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 242, 255, 0.3); 
+    animation: aparecer 0.3s ease-out;
+}
+
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(-50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+.modal-content h3 {
+    margin-top: 0;
+    color: #00f2ff;
+}
+
+.modal-content p {
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+
+
+
+
+/*menu hamburguesa */
+.hamburger {
+  cursor: pointer;
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 1001; 
+}
+
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background-color: #00bfa6; 
+  border-radius: 2px;
+}
+
+
+.enlaces {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.enlaces a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.enlaces a:hover {
+  color: #00bfa6;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    position: fixed;   
+    top: 20px;        
+    right: 20px;        
+    z-index: 1001;
+  }
+
+  .hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: #00bfa6;
+    border-radius: 2px;
+  }
+
+  .enlaces {
+    display: flex;
+    flex-direction: column;
+    background-color: #0d0d0d;
+    position: fixed;   
+    top: 0;
+    right: -100%;      
+    width: 30%;
+    height: 100%;
+    padding: 60px 20px;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  .enlaces.mostrar {
+    right: 0;         
+  }
+
+  .enlaces :hover {
+    color: #00bfa6;
+  }
+}
+
+
+
+.cards {
+  display: flex;
+  gap: 3%;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 8px 40px; 
+}
+
+.card {
+  flex: 1 1 10%;
+  border: 3px solid orange;
+  border-radius: 10%;
+  text-align: center;
+  padding: 2%;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  top: 20px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card img {
+  width: 40%;
+  height: auto;
+  border-radius: 2%;
+  transform: scale(1.1);
+}
+
+.card:hover {
+   transform: scale(1.05);       
+    border-color: #00bfa6;        
+    color: #00bfa6;               
+}
+
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;   
+    text-align: center;
+  }
+
+  .card {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .cards {
+    margin-left: 0;
+    border-width: 2px;     
+    padding: 8px 40px; 
+  }
+
+  .cards img {
+    width: 200px; 
+    position: relative;
+    top: 10px;
+    width: 50%;
+    height: 100%;
+  }
+
+  .cards h3 {
+    position: relative;
+    top: 10px;
+  }
+
+}
+
+
+ #servicios {
+text-align: justify;
+ }

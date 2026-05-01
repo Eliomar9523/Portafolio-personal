@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  
+  <nav class="enlaces" id="menu">
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+   <li><a href="#proyectos">Proyectos</a></li>
+  </nav>
+
+ 
+  <section id="inicio" class="section">
+    <div class="intro-container">
+      <div class="intro-text">
+        <h1>¡HOLA👋🏻! SOY</h1>
+        <h2>Eliomar Reyes Hernández</h2>
+        <p>Lic. en Informática Administrativa</p>
+        <button id="btnAbrir">Leer mas</button>
+
+        <div id="miModal" class="modal">
+        <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h3>Sobre mí</h3>
+        <p>Hola👋🏻, soy Eliomar Reyes Hernández</p>
+        <p>Egrese de la Licenciatura en Informatica Administrativa, en la Universidad Intercultural de San Luis Potosí (UICSLP) Campus Tancanhuitz.</p>
+        <P> Mi mayor pasatiempo es jugar videojuegos y jugar juegos de mesa con amigos, me gusta mucho el basquetball, aunque no lo practico seguido
+          es uno de los deportes que a mi me llama mucho la atencion. </p>
+    </div>
+   </div>
+      </div>
+
+
+      <div class="avatar">
+        <img src="avatar.png" alt="Mi Avatar">
+      </div>
+    </div>
+  </section>
+
+ 
+  <section id="servicios" class="section">
+    <h2>Servicios</h2>
+    <ul><p>Creacion de paginas web mediante HTML y CSS, utlizando lenguajes de programacion como JavaScript, PHP y Python.</p></ul>
+    <ul><p>Diseño grafico con software especial (Photoshop y CorelDraw).</p></ul>
+    <ul><p>Manejo de la paqueteria de office (Word, Excel, Power Point, Access, etc.)</p></ul>
+  </section>
+
+ 
+  <section id="contacto" class="section">
+    <h2>Contacto</h2>
+
+    <div class="cards">
+      <a href="#" onclick="abrirWhatsApp()" target="_blank" class="card">
+        <img src="whatsapp.png" alt="telefono">
+        <h3>Whatsapp</h3>
+      </a>
+
+      <a href="mailto:elioorh1001@gmail.com?" target="_blank" class="card"> 
+        <img src="gmail.png" alt="correo">
+        <h3>Correo Electronico</h3>
+      </a>
+
+      <a href="#" onclick="abrirFacebook()" target="_blank" class="card">
+        <img src="facebook.png" alt="correo">
+        <h3>Facebook</h3>
+      </a>
+
+      <a href="#" onclick="abrirInstagram()"target="_blank" class="card"> 
+        <img src="instagram.png" alt="correo">
+        <h3>Instagram</h3>
+      </a>
+    </div>
+  </section>
+  
+
+ 
+  <section id="proyectos" class="section">
+    <h2>Proyectos</h2>
+    <ul><p>Participacion en la creacion de una aplicacion movil para la Radio Difusora XEAN La Voz de las Huastecas</p></ul>
+  </section>
+
+  <script src="javascript.js"></script>
+</body>
+</html>
+
