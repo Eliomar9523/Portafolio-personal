@@ -127,10 +127,6 @@ nav a:hover {
 }
 
 
-
-
-
-/* El fondo oscuro que cubre la pantalla */
 .modal {
     display: none; 
     position: fixed;
@@ -142,7 +138,7 @@ nav a:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* La caja blanca con la información */
+
 .modal-content {
     background-color: #1a1a1a; 
     color: white;
@@ -155,7 +151,7 @@ nav a:hover {
     text-align: justify;
 }
 
-/* El botón de cerrar (x) */
+
 .close-btn {
     position: absolute;
     top: 10px;
@@ -165,7 +161,7 @@ nav a:hover {
     color: #00f2ff;
 }
 
-/* La caja de información adaptable */
+
 .modal-content {
     background-color: #1a1a1a;
     color: white;
@@ -201,7 +197,7 @@ nav a:hover {
 
 
 
-/*menu hamburguesa */
+
 .hamburger {
   cursor: pointer;
   display: none;
